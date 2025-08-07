@@ -6,7 +6,7 @@ import Logo from "../../assets/headers-image/Group 64.svg";
 const Footer = () => {
   return (
     <div className="bg-[#F2F2F2]">
-      <footer className="container border-t border-gray-200 py-10 px-6 md:px-16">
+      <footer className="container mt-[40px] py-10 px-6 md:px-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-gray-700">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-2 mb-2">
