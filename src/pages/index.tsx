@@ -19,11 +19,11 @@ const Loader = () => {
 
 const Home = lazy(() => import("./home/Home"));
 const Layout = lazy(() => import("./layout/Layout"));
-const ProductDetail = lazy(() => import("./product/ProductDetail"));
+const ProductDetail = lazy(() => import("./product/ProductDetail"));//✅ Asadbek & Loader
 
 const Kompany = lazy(() => import("./header-pages/collaction/Kompany"));
 const Dostafka = lazy(() => import("./header-pages/collaction/Dostafka"));
-const Vazvrad = lazy(() => import("./header-pages/collaction/vazvrad"));
+const Vazvrad = lazy(() => import("./header-pages/collaction/vazvrad"));//✅ Asadbek
 const Garanty = lazy(() => import("./header-pages/collaction/garanty"));
 const Kontakt = lazy(() => import("./header-pages/collaction/kontakt"));
 const Blok = lazy(() => import("./header-pages/collaction/blok"));
