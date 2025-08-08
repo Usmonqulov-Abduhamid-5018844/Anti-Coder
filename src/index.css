@@ -13,3 +13,8 @@
 .container-lg{
     max-width: 1714px;
 }
+
+.scrolbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
