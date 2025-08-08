@@ -21,7 +21,7 @@ const Home = lazy(() => import("./home/Home"));
 const Layout = lazy(() => import("./layout/Layout"));
 const ProductDetail = lazy(() => import("./product/ProductDetail"));//✅ Asadbek
 
-const Kompany = lazy(() => import("./header-pages/collaction/Kompany"));
+const Kompany = lazy(() => import("./header-pages/collaction/Kompany"));//✅ Asadbek
 const Dostafka = lazy(() => import("./header-pages/collaction/Dostafka"));
 const Vazvrad = lazy(() => import("./header-pages/collaction/vazvrad"));//✅ Asadbek
 const Garanty = lazy(() => import("./header-pages/collaction/garanty"));//✅ Asadbek
