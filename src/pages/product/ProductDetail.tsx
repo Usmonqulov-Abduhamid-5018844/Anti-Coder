@@ -96,10 +96,9 @@ const ProductDetail = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  `${
-                    isActive
-                      ? "text-[black] border-b-1 border-b-[black] py-[24px]"
-                      : ""
+                  `${isActive
+                    ? "text-[black] border-b-1 border-b-[black] py-[24px]"
+                    : ""
                   }`
                 }
                 to={"#"}

@@ -25,7 +25,7 @@ const Nochniky = lazy(() => import("./header-pages/pages/nochniky"));
 const Podsvedki = lazy(() => import("./header-pages/pages/podsvedki"));
 const UlichnyOslujitel = lazy(() => import("./header-pages/pages/ulichny-oslujitel"));
 const Zvatilny = lazy(() => import("./header-pages/pages/zvatilny"));
-const Page = lazy(() => import("../components/details/Details"));
+
 
 
 const Not_Fount = lazy(()=> import("./not-fount"))
@@ -49,7 +49,6 @@ const MainRouters = () => {
             {path: "garanty", element:<Garanty/> },
             {path: "kontakt", element:<Kontakt/> },
             {path: "blog", element:<Blok/> },
-            {path: "detali", element:<Page/>},
 
 
             {path: "izbriny", element:<Izbrinnoy/> },
