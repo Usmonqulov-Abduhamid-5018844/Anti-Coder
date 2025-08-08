@@ -1,9 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { useRoutes } from "react-router-dom";
 
-
-
-
 const Home = lazy(() => import("./home/Home"));
 const Layout = lazy(() => import("./layout/Layout"));
 const ProductDetail = lazy(() => import("./product/ProductDetail"));
@@ -28,6 +25,7 @@ const Nochniky = lazy(() => import("./header-pages/pages/nochniky"));
 const Podsvedki = lazy(() => import("./header-pages/pages/podsvedki"));
 const UlichnyOslujitel = lazy(() => import("./header-pages/pages/ulichny-oslujitel"));
 const Zvatilny = lazy(() => import("./header-pages/pages/zvatilny"));
+const Page = lazy(() => import("../components/details/Details"));
 
 
 const Not_Fount = lazy(()=> import("./not-fount"))
@@ -51,6 +49,7 @@ const MainRouters = () => {
             {path: "garanty", element:<Garanty/> },
             {path: "kontakt", element:<Kontakt/> },
             {path: "blog", element:<Blok/> },
+            {path: "detali", element:<Page/>},
 
 
             {path: "izbriny", element:<Izbrinnoy/> },
