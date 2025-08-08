@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import "./NotFound.css";
 import { NavLink } from "react-router-dom";
 
 const NotFound = () => {
