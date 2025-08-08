@@ -8,7 +8,7 @@ const Collaction = () => {
   return (
     <div className="collaction flex justify-between px-[16px] pt-[20px]">
       <ul className="flex gap-10 text-black/50">
-        <li className="hidden max-[1030px]:block text-[30px]">
+        <li className="hidden max-[1030px]:block text-[35px]">
           <HiOutlineBars3BottomRight />
         </li>
         <li className="max-[1030px]:hidden">
@@ -72,7 +72,7 @@ const Collaction = () => {
           </NavLink>
         </li>
       </ul >
-      <ul className="flex gap-10 text-black/50">
+      <ul className="flex gap-10 text-black/50 max-[1030px]:hidden">
         <li className="text-black">
           <a href="tel:8(800)890-46-56">8 (800) 890-46-56</a>
         </li>

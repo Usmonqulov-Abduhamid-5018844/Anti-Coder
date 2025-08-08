@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Pages = () => {
   return (
     <div className="container mt-[30px] mb-[10px]">
-      <div className=" rounded-[40px] bg-[#DBDBDB]/20 overflow-auto">
+      <div className="scrolbar_header rounded-[40px] bg-[#DBDBDB]/20 overflow-auto">
         <ul className="flex justify-around py-[7px] gap-7 text-nowrap px-[20px]">
           <li>
             <NavLink className={({isActive})=> (isActive ? "text-gray-500/70" : "")} to={"zvatilny"}>Светильники</NavLink>
