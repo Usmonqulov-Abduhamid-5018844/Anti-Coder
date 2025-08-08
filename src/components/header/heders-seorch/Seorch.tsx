@@ -18,9 +18,9 @@ const Seorch = () => {
         </div>
         <NavLink to={""}>
           <div>
-            <button className="bg-black/70 text-white flex px-[20px] pr-[35px] py-[10px] gap-5 rounded-[30px] text-[20px] items-center">
-              <img className="w-[30px] h-[19px]" src={bars} alt="" />
-              Каталог
+            <button className="bg-black/70 text-white flex px-[20px] pr-[35px] py-[7px] gap-5 rounded-[30px] text-[20px] items-center">
+              <img className="w-[25px] h-[21px]" src={bars} alt="" />
+              <span className="pr-2">Каталог</span>
             </button>
           </div>
         </NavLink>

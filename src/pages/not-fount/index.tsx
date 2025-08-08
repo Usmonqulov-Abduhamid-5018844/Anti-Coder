@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./NotFound.css";
+import { NavLink } from "react-router-dom";
 
 const NotFound = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -57,12 +57,12 @@ const NotFound = () => {
             К сожалению, эта страница не существует или была удалена.
             Проверьте адрес или вернитесь на главную.
           </p>
-          <a
-            href="/"
+          <NavLink
+            to="/"
             className="inline-block mt-4 px-6 py-3 bg-[#00ff00] text-black font-medium rounded-lg shadow hover:bg-[#00cc00] transition duration-300"
-          >
+        >
             Вернуться на главную
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>

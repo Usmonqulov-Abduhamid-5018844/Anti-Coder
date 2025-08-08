@@ -6,10 +6,10 @@ const Input = () => {
     <>
       <div className="input border flex outline-none w-[626px] h-[50px] rounded-[40px] overflow-hidden gap-2">
         <input
-          className="w-[90%] focus:outline-none indent-6 text-[20px]"
+          className="w-[87%] focus:outline-none  indent-6 text-[20px]"
           type="text"
         />
-        <button>
+        <button className="pr-2">
           <CiSearch className="  text-[35px] my-auto" />
         </button>
       </div>

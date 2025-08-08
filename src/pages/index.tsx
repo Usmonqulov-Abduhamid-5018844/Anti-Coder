@@ -40,7 +40,7 @@ const MainRouters = () => {
           children: [
             { index: true, element: <Home /> },
             {path: "/", element: <Home/>},
-            { path: "product", element: <ProductDetail /> },
+            { path: "product/:id", element: <ProductDetail /> },
 
 
             {path: "kompany", element:<Kompany/> },
