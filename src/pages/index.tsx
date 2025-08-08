@@ -1,9 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { useRoutes } from "react-router-dom";
 
-
-
-
 const Home = lazy(() => import("./home/Home"));
 const Layout = lazy(() => import("./layout/Layout"));
 const ProductDetail = lazy(() => import("./product/ProductDetail"));
@@ -30,6 +27,7 @@ const UlichnyOslujitel = lazy(() => import("./header-pages/pages/ulichny-oslujit
 const Zvatilny = lazy(() => import("./header-pages/pages/zvatilny"));
 
 
+
 const Not_Fount = lazy(()=> import("./not-fount"))
 
 const MainRouters = () => {
@@ -42,7 +40,7 @@ const MainRouters = () => {
           children: [
             { index: true, element: <Home /> },
             {path: "/", element: <Home/>},
-            { path: "product/:id", element: <ProductDetail /> },
+            { path: "product", element: <ProductDetail /> },
 
 
             {path: "kompany", element:<Kompany/> },
