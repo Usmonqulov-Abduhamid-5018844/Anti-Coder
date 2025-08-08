@@ -19,12 +19,12 @@ const Loader = () => {
 
 const Home = lazy(() => import("./home/Home"));
 const Layout = lazy(() => import("./layout/Layout"));
-const ProductDetail = lazy(() => import("./product/ProductDetail"));//✅ Asadbek & Loader
+const ProductDetail = lazy(() => import("./product/ProductDetail"));//✅ Asadbek
 
 const Kompany = lazy(() => import("./header-pages/collaction/Kompany"));
 const Dostafka = lazy(() => import("./header-pages/collaction/Dostafka"));
 const Vazvrad = lazy(() => import("./header-pages/collaction/vazvrad"));//✅ Asadbek
-const Garanty = lazy(() => import("./header-pages/collaction/garanty"));
+const Garanty = lazy(() => import("./header-pages/collaction/garanty"));//✅ Asadbek
 const Kontakt = lazy(() => import("./header-pages/collaction/kontakt"));
 const Blok = lazy(() => import("./header-pages/collaction/blok"));
 
@@ -47,7 +47,7 @@ const UlichnyOslujitel = lazy(() =>
 );
 const Zvatilny = lazy(() => import("./header-pages/pages/zvatilny"));
 
-const Not_Fount = lazy(() => import("./not-fount"));
+const Not_Fount = lazy(() => import("./not-fount"));//✅ Asadbek
 
 const MainRouters = () => {
   return (
