@@ -28,7 +28,7 @@ const Zvatilny = lazy(() => import("./header-pages/pages/zvatilny"));
 
 
 
-const Not_Fount = lazy(()=> import("./not-fount"))
+const Not_Fount = lazy(()=> import("./not-fount/index"))
 
 const MainRouters = () => {
   return (
