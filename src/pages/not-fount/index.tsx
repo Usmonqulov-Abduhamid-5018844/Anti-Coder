@@ -46,10 +46,7 @@ const NotFound = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Matrix background */}
       <canvas ref={canvasRef} className="absolute top-0 left-0"></canvas>
-
-      {/* Content */}
       <div className="relative flex items-center justify-center h-full z-10 px-6">
         <div className="text-center space-y-4 animate-fade-in">
           <h1 className="text-[10rem] md:text-[12rem] font-extrabold text-[#00ff00] animate-spin-slow glow-text animate-jitter animate-glitch">
