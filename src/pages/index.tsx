@@ -22,10 +22,10 @@ const Layout = lazy(() => import("./layout/Layout"));
 const ProductDetail = lazy(() => import("./product/ProductDetail"));//✅ Asadbek
 
 const Kompany = lazy(() => import("./header-pages/collaction/Kompany"));//✅ Asadbek
-const Dostafka = lazy(() => import("./header-pages/collaction/Dostafka"));
+const Dostafka = lazy(() => import("./header-pages/collaction/Dostafka"));//✅ Asadbek
 const Vazvrad = lazy(() => import("./header-pages/collaction/vazvrad"));//✅ Asadbek
 const Garanty = lazy(() => import("./header-pages/collaction/garanty"));//✅ Asadbek
-const Kontakt = lazy(() => import("./header-pages/collaction/kontakt"));
+const Kontakt = lazy(() => import("./header-pages/collaction/kontakt"));//✅ Asadbek
 const Blok = lazy(() => import("./header-pages/collaction/blok"));
 
 const Izbrinnoy = lazy(() => import("./header-pages/izbrinny/izbrinnoy"));

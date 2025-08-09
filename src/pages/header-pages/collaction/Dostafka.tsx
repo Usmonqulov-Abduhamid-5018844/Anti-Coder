@@ -1,9 +1,25 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Payment from "../../../assets/headers-image/paymend.svg";
 
 const Dostafka = () => {
   return (
-    <div className="container mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div className="container mx-auto mt-[-50px] px-4 md:px-6 py-10 md:py-14">
+
+      <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-500">
+        <ol className="flex items-center gap-1">
+          <li>
+            <NavLink to="/" className="hover:text-gray-700">
+              Главная
+            </NavLink>
+          </li>
+          <li className="text-gray-400 px-1">›</li>
+          <li>
+            <span className="text-gray-700">Доставка и оплата</span>
+          </li>
+        </ol>
+      </nav>
+
       <section className="grid gap-8 md:gap-12 md:grid-cols-[360px_1fr]">
         <header aria-labelledby="page-title" className="md:pt-2">
           <h1
@@ -90,7 +106,7 @@ const Dostafka = () => {
             </ul>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 ">
             <h3 className="text-lg font-semibold text-slate-900">
               Как оформить заказ
             </h3>
@@ -104,7 +120,7 @@ const Dostafka = () => {
             </ul>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 ">
             <h3 className="text-lg font-semibold text-slate-900">
               Изменение даты доставки
             </h3>
@@ -120,7 +136,7 @@ const Dostafka = () => {
             </ul>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 ">
             <h3 className="text-lg font-semibold text-slate-900">
               Способы оплаты
             </h3>

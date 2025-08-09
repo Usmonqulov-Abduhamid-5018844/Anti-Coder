@@ -1,9 +1,26 @@
+"use client"
+
 import React from "react"
+import { NavLink } from "react-router-dom"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Kompany = () => {
   return (
-    <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
+    <div className="container mx-auto mt-[-50px] px-4 md:px-6 md:py-12">
+      <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-6">
+        <ol className="flex items-center gap-1">
+          <li>
+            <NavLink to={"/"}>
+              <span className="hover:text-gray-700 cursor-default">Главная</span>
+            </NavLink>
+          </li>
+          <li className="text-gray-400 px-1">›</li>
+          <li>
+            <span className="text-gray-700">О компании</span>
+          </li>
+        </ol>
+      </nav>
+
       <main className="grid gap-8 md:gap-12 md:grid-cols-[360px_1fr]">
         <aside aria-labelledby="about-title" className="space-y-6 md:space-y-8">
           <h1

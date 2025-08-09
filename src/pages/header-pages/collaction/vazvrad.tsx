@@ -1,8 +1,23 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
 
 const Vazvrad = () => {
   return (
-    <div className="container mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div className="container mt-[-50px] mx-auto px-4 md:px-6 py-10 md:py-14">
+     <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-6">
+             <ol className="flex items-center gap-1">
+               <li>
+                 <NavLink to={"/"}>
+                   <span className="hover:text-gray-700 cursor-default">Главная</span>
+                 </NavLink>
+               </li>
+               <li className="text-gray-400 px-1">›</li>
+               <li>
+                 <span className="text-gray-700">Возврат</span>
+               </li>
+             </ol>
+           </nav>
+
       <main className="grid gap-10 md:gap-12 md:grid-cols-[360px_1fr]">
         <header aria-labelledby="page-title" className="md:pt-2">
           <h1

@@ -1,8 +1,21 @@
-import React from "react"
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Garanty = () => {
   return (
-    <div className="container mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div className="container mx-auto mt-[-50px] px-4 md:px-6 py-10 md:py-14">
+      <nav className="text-sm mb-6">
+        <ol className="flex items-center space-x-2 text-gray-500">
+          <li>
+            <NavLink to="/" className="hover:underline">
+              Bosh sahifa
+            </NavLink>
+          </li>
+          <li>/</li>
+          <li className="text-gray-800 font-medium">Гарантии</li>
+        </ol>
+      </nav>
+
       <main className="grid gap-10 md:gap-12 md:grid-cols-[360px_1fr]">
         <header aria-labelledby="page-title" className="md:pt-2">
           <h1
@@ -15,7 +28,7 @@ const Garanty = () => {
 
         <section
           aria-labelledby="wish-return"
-          className="max-w-2xl text-slate-800 space-y-4"
+          className="max-w-2xl  text-slate-800 space-y-4"
         >
           <h2 id="wish-return" className="text-xl font-semibold text-slate-900">
             Обмен и возврат по желанию покупателя
@@ -64,7 +77,7 @@ const Garanty = () => {
         className="fixed inset-x-0 bottom-0 h-1.5 bg-purple-600"
       />
     </div>
-  )
-}
+  );
+};
 
-export default React.memo(Garanty)
+export default React.memo(Garanty);
