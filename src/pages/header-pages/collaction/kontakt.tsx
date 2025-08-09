@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom"
 const Kontakt = () => {
   return (
     <section className="bg-white">
-      <div className="mx-auto container md:px-6 pt-6 md:pt-10">
+      <div className="mx-auto container mt-[-40px] md:px-6 pt-6 md:pt-10">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="flex-1">
             <nav aria-label="Breadcrumb" className="text-sm text-gray-500">
@@ -52,7 +52,7 @@ const Kontakt = () => {
           />
 
           <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-10 w-[94%] md:w-[90%]">
-            <div className="pointer-events-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border-[3px] md:border-4 border-[#2E7CF6] px-5 md:px-8 py-6 md:py-8">
+            <div className="pointer-events-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-5 md:px-8 py-6 md:py-8">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 items-center">
                 <div className="space-y-2">
                   <div className="text-gray-900 text-base md:text-lg font-semibold">Адрес магазина</div>

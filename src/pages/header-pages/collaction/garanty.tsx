@@ -4,18 +4,19 @@ import { NavLink } from "react-router-dom";
 const Garanty = () => {
   return (
     <div className="container mx-auto mt-[-50px] px-4 md:px-6 py-10 md:py-14">
-      <nav className="text-sm mb-6">
-        <ol className="flex items-center space-x-2 text-gray-500">
-          <li>
-            <NavLink to="/" className="hover:underline">
-              Bosh sahifa
-            </NavLink>
-          </li>
-          <li>/</li>
-          <li className="text-gray-800 font-medium">Гарантии</li>
-        </ol>
-      </nav>
-
+      <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-500">
+              <ol className="flex items-center gap-1">
+                <li>
+                  <NavLink to="/" className="hover:text-gray-700">
+                    Главная
+                  </NavLink>
+                </li>
+                <li className="text-gray-400 px-1">›</li>
+                <li>
+                  <span className="text-gray-700">Гарантии</span>
+                </li>
+              </ol>
+            </nav>
       <main className="grid gap-10 md:gap-12 md:grid-cols-[360px_1fr]">
         <header aria-labelledby="page-title" className="md:pt-2">
           <h1
