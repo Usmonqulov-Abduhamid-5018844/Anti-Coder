@@ -11,7 +11,7 @@ const Hero = () => {
               Скидка 15% <br />
               на все подвесные светильники
             </h2>
-            <div className="w-[495px] max-[630px]:text-[30px] rounded-[100px] flex justify-center items-center text-white bg-[#454545] ml-[-20px] max-[1200px]:w-[300px] max-[1200px]:text-[40px] max-[1200px]:ml-0">
+            <div className="w-[495px] max-[630px]:text-[30px] rounded-[100px] flex justify-center items-center text-white bg-[#454545] ml-[-20px] max-[1200px]:w-[280px] max-[1200px]:text-[40px] max-[1200px]:ml-0">
               до 5 февраля
             </div>
           </div>

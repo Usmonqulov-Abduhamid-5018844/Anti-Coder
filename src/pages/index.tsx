@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { useRoutes } from "react-router-dom";
+import Category from "./category/category";
 
 
 
@@ -43,6 +44,7 @@ const MainRouters = () => {
             { index: true, element: <Home /> },
             {path: "/", element: <Home/>},
             { path: "product/:id", element: <ProductDetail /> },
+            {path:"category", element:<Category/>},
 
 
             {path: "kompany", element:<Kompany/> },
