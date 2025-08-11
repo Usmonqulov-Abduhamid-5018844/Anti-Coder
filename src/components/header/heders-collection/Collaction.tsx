@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Popap from "../../../pages/ui/Popap";
-import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 
 const Collaction = () => {
   const [isPopap, setPopap] = useState(false);
   return (
     <div className="collaction flex justify-between px-[16px] pt-[20px]">
       <ul className="flex gap-10 text-black/50">
-        <li className="hidden max-[1030px]:block text-[35px]">
-          <HiOutlineBars3BottomRight />
-        </li>
         <li className="max-[1030px]:hidden">
           <NavLink
             className={({ isActive }) =>
