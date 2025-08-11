@@ -76,7 +76,7 @@ export const Categories = [
     id: 11,
     img: category11,
     title: "Комплектуюшие",
-    price: 540,
+    price: 540,}]
 
 interface Product {
   id: number;
