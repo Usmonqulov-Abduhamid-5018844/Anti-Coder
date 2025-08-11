@@ -1,32 +1,39 @@
 import React from "react";
-import brandArteLogo from "../../assets/brandArteLogo.svg";
-import brandDivinareLogo from "../../assets/brandDivinareLogo.svg";
-import brandOdeonLightLogo from "../../assets/brandOdeonLightLogo.svg";
+import brandArteLogo from "../../assets/brand-images/brandArteLogo.svg";
+import brandDivinareLogo from "../../assets/brand-images/brandDivinareLogo.svg";
+import brandOdeonLightLogo from "../../assets/brand-images/brandOdeonLightLogo.svg";
+import brandArrowLeft from "../../assets/brand-images/brandArrowLeft.svg";
+import brandArrowRight from "../../assets/brand-images/brandArrowRight.svg"
 
 const Brands = () => {
   return (
-    <section className="py-8">
-      <div className="container">
-        <h2 className="text-xl font-bold text-[#454545] mb-6">
-          Только проверенные бренды
-        </h2>
+    <section>
+      <div className="container mt-[60px]">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <h2 className="text-[#454545] text-[28px] font-bold text-center">
+            Только проверенные бренды
+          </h2>
+          <div className="flex items-center gap-2.5">
+            <img
+              src={brandArrowLeft}
+              alt=""
+              className="w-8 h-8"
+            />
+            <img
+              src={brandArrowRight}
+              alt=""
+              className="w-8 h-8"
+            />
+          </div>
+        </div>
 
-        <div className="flex gap-5 overflow-x-auto no-scrollbar">
-          <div className="w-[310px] h-[112px] border border-[#D9D9D9] flex items-center justify-center">
-            <img src={brandArteLogo} alt="" className="h-[70px]" />
-          </div>
-          <div className="w-[310px] h-[112px] border border-[#D9D9D9] flex items-center justify-center">
-            <img src={brandDivinareLogo} alt="" className="h-[70px]" />
-          </div>
-          <div className="w-[310px] h-[112px] border border-[#D9D9D9] flex items-center justify-center">
-            <img src={brandOdeonLightLogo} alt="" className="h-[70px]" />
-          </div>
-          <div className="w-[310px] h-[112px] border border-[#D9D9D9] flex items-center justify-center">
-            <img src={brandArteLogo} alt="" className="h-[70px]" />
-          </div>
-          <div className="w-[310px] h-[112px] border border-[#D9D9D9] flex items-center justify-center">
-            <img src={brandDivinareLogo} alt="" className="h-[70px]" />
-          </div>
+        <div className=" scrolbar mt-[32px] flex items-center gap-4 overflow-auto custom-scroll">
+          <img src={brandArteLogo} alt="" />
+          <img src={brandDivinareLogo} alt="" />
+          <img src={brandOdeonLightLogo} alt="" />
+          <img src={brandArteLogo} alt="" />
+          <img src={brandDivinareLogo} alt="" />
+          <img src={brandOdeonLightLogo} alt="" />
         </div>
       </div>
     </section>

@@ -37,12 +37,12 @@ const Footer = () => {
           <div className="flex flex-col gap-6">
             <h4 className="text-base text-[18px] font-semibold mb-2">Покупателям</h4>
             <div className="flex flex-col gap-6 text-gray-600">
-              <Link to="/about">О компании</Link>
-              <Link to="/dostavka">Доставка и оплата</Link>
-              <Link to="/vozvrat">Возврат</Link>
-              <Link to="/garantii">Гарантии</Link>
-              <Link to="/kontakty">Контакты</Link>
-              <Link to="/blog">Блог</Link>
+              <Link to="kompany">О компании</Link>
+              <Link to="dastafka">Доставка и оплата</Link>
+              <Link to="vazvrad">Возврат</Link>
+              <Link to="garanty">Гарантии</Link>
+              <Link to="kontakt">Контакты</Link>
+              <Link to="blog">Блог</Link>
             </div>
           </div>
 
