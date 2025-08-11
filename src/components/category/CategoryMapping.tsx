@@ -1,4 +1,4 @@
-import { memo, type FC, useState, useEffect } from 'react';
+import { memo, useState, useEffect } from 'react';
 import { Categories } from "../../static";
 
 
@@ -19,10 +19,8 @@ const CategoryMapping = () => {
       }
     };
 
-    // Boshlang‘ich tekshirish
     handleResize();
 
-    // Tinglash
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
