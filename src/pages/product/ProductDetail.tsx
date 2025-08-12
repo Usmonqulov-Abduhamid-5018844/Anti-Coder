@@ -5,7 +5,7 @@ import arrowdown from "../../assets/arrowdown.svg";
 import { FaBars, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { HiOutlineChartBar } from "react-icons/hi";
 import { ProductContent } from "../../static";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const ProductDetail = () => {
   return (
@@ -95,40 +95,31 @@ const ProductDetail = () => {
           <ul className="flex gap-[60px] text-[#999] flex-wrap">
             <li>
               <NavLink
+                end
+                to=""
                 className={({ isActive }) =>
                   `${isActive
                     ? "text-[black] border-b-1 border-b-[black] py-[24px]"
                     : ""
                   }`
                 }
-                to={"#"}
               >
                 Описание
               </NavLink>
             </li>
             <li>
-              <NavLink to={"#"}>Характеристики</NavLink>
+              <NavLink to="characteristics">Характеристики</NavLink>
             </li>
             <li>
-              <NavLink to={"#"}>Видео</NavLink>
+              <NavLink to="video">Видео</NavLink>
             </li>
             <li>
-              <NavLink to={"#"}>Галерея</NavLink>
+              <NavLink to="gallery">Галерея</NavLink>
             </li>
           </ul>
+
           <div className="w-full border text-[#F2F2F2] mt-5"></div>
-          <div className="flex gap-[110px] pt-[60px] max-sm:flex-wrap">
-            <p className="w-[47%] font-medium text-[20px] text-[#454545] max-md:text-[17px]">
-              Архитектурный светильник декоративного назначения Clivo для
-              контурной подсветки проемов окон, витражей, входных групп зданий.
-              Формирует четкий узкий луч в виде рамки без паразитной засветки.
-            </p>
-            <p className="w-[53%] font-medium text-[16px] text-[#999] max-md:text-[14px]">
-              Производитель оставляет за собой право вносить изменения, не
-              ухудшающие качество изделия, в конструкцию отдельных деталей,
-              узлов и параметров светильника без предварительного уведомления.
-            </p>
-          </div>
+          <Outlet />
         </div>
       </div>
     </section>
@@ -136,4 +127,3 @@ const ProductDetail = () => {
 };
 
 export default React.memo(ProductDetail);
-<div className="w-full"></div>;
