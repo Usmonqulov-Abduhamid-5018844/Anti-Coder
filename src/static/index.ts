@@ -127,3 +127,10 @@ export const ProductContent: Product[] = [
 
   },
 ];
+
+export interface likeProducts {
+  id: number;
+  title: string;
+  price: number;
+  thumbnail: string;
+}

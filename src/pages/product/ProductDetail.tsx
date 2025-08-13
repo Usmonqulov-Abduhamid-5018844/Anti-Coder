@@ -5,9 +5,26 @@ import arrowdown from "../../assets/arrowdown.svg";
 import { FaBars, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { HiOutlineChartBar } from "react-icons/hi";
 import { ProductContent } from "../../static";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleLike } from "../../lib/features/likeSlice";
+import type { RootState } from "../../lib/store";
 
 const ProductDetail = () => {
+  const dispatch = useDispatch();
+  const wishlist = useSelector((state: RootState) => state.like.value);
+
+  const product = {
+    id: 99,
+    title: "Встраиваемый Светильник Novotech",
+    desc: "Yorqin va sifatli svetilnik",
+    price: 6399,
+    thumbnail: detailImg,
+    details: ProductContent
+  };
+
+  const isLiked = wishlist.some((item) => item.id === product.id);
+
   return (
     <section className="mt-[102px] pb-[127px]">
       <div className="container">
@@ -22,7 +39,7 @@ const ProductDetail = () => {
               </div>
               <div className="flex flex-col gap-[17px]">
                 {[1, 2, 3, 4, 5].map((_, i) => (
-                  <img key={i} width={58} src={detailImg} />
+                  <img key={i} width={58} src={detailImg} alt="" />
                 ))}
               </div>
               <div>
@@ -37,6 +54,7 @@ const ProductDetail = () => {
               <img src={detailImg} alt="" />
             </div>
           </div>
+
           <div className="w-1/2 pl-[59px] max-xl:w-[100%] max-xl:pl-0">
             <h1 className="font-bold text-5xl text-[#454545] max-lg:text-4xl max-md:text-3xl max-sm:text-2xl">
               Встраиваемый <br /> Светильник Novotech
@@ -46,7 +64,7 @@ const ProductDetail = () => {
               <div className="flex">
                 <div className="flex flex-col">
                   <del className="font-medium text-[12px] text-[#9F9F9F]">
-                    7 000P
+                    7 000₽
                   </del>
                   <span className="font-bold text-[20px] text-[#454545]">
                     6 399₽
@@ -57,12 +75,21 @@ const ProductDetail = () => {
                   <p>В корзину</p>
                 </div>
               </div>
+
               <div className="flex items-center gap-5 ml-auto max-sm:hidden">
-                <div className="w-[50px] h-[50px] border border-[#454545] rounded-[50%] flex items-center justify-center cursor-pointer">
+
+                <div
+                  onClick={() => dispatch(toggleLike(product))}
+                  className={`w-[50px] h-[50px] rounded-full flex items-center justify-center cursor-pointer border ${
+                    isLiked
+                      ? "border-[#454545] text-red-600"
+                      : "border-[#454545] text-[#454545]"
+                  }`}
+                >
                   <FaHeart className="w-[20px] h-[18px]" />
                 </div>
 
-                <div className="w-[50px] h-[50px] border border-[#454545] rounded-[50%] flex items-center justify-center cursor-pointer">
+                <div className="w-[50px] h-[50px] border border-[#454545] rounded-full flex items-center justify-center cursor-pointer">
                   <HiOutlineChartBar className="w-[22px] h-[22px]" />
                 </div>
               </div>
@@ -95,40 +122,32 @@ const ProductDetail = () => {
           <ul className="flex gap-[60px] text-[#999] flex-wrap">
             <li>
               <NavLink
+                end
+                to=""
                 className={({ isActive }) =>
-                  `${isActive
-                    ? "text-[black] border-b-1 border-b-[black] py-[24px]"
-                    : ""
+                  `${
+                    isActive
+                      ? "text-[black] border-b-1 border-b-[black] py-[24px]"
+                      : ""
                   }`
                 }
-                to={"#"}
               >
                 Описание
               </NavLink>
             </li>
             <li>
-              <NavLink to={"#"}>Характеристики</NavLink>
+              <NavLink to="characteristics">Характеристики</NavLink>
             </li>
             <li>
-              <NavLink to={"#"}>Видео</NavLink>
+              <NavLink to="video">Видео</NavLink>
             </li>
             <li>
-              <NavLink to={"#"}>Галерея</NavLink>
+              <NavLink to="gallery">Галерея</NavLink>
             </li>
           </ul>
+
           <div className="w-full border text-[#F2F2F2] mt-5"></div>
-          <div className="flex gap-[110px] pt-[60px] max-sm:flex-wrap">
-            <p className="w-[47%] font-medium text-[20px] text-[#454545] max-md:text-[17px]">
-              Архитектурный светильник декоративного назначения Clivo для
-              контурной подсветки проемов окон, витражей, входных групп зданий.
-              Формирует четкий узкий луч в виде рамки без паразитной засветки.
-            </p>
-            <p className="w-[53%] font-medium text-[16px] text-[#999] max-md:text-[14px]">
-              Производитель оставляет за собой право вносить изменения, не
-              ухудшающие качество изделия, в конструкцию отдельных деталей,
-              узлов и параметров светильника без предварительного уведомления.
-            </p>
-          </div>
+          <Outlet />
         </div>
       </div>
     </section>
@@ -136,4 +155,3 @@ const ProductDetail = () => {
 };
 
 export default React.memo(ProductDetail);
-<div className="w-full"></div>;

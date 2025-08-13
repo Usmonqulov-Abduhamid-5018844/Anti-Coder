@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from "react-hot-toast";
 import Hero from "../../components/hero/Hero";
 import Category from "../../components/category/Category";
 import Features from "../../components/features/Features";
@@ -8,11 +9,13 @@ import Brands from "../../components/brands/Brands";
 const Home = () => {
   return (
     <div>
-      <Hero/>
-      <Category/>
-      <Features/>
-      <ProductView/>
-      <Brands/>
+      <Toaster reverseOrder={false} />
+
+      <Hero />
+      <Category />
+      <Features />
+      <ProductView />
+      <Brands />
     </div>
   );
 };

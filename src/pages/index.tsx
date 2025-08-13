@@ -1,10 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { useRoutes } from "react-router-dom";
-
 import Category from "./category/category";
-
 import { Flex, Spin } from 'antd';
-
 
 const Loader = () => {
   return (
@@ -20,17 +17,24 @@ const Loader = () => {
   );
 };
 
-
 const Home = lazy(() => import("./home/Home"));
 const Layout = lazy(() => import("./layout/Layout"));
+
+const Login = lazy(() => import("./login"));//✅ Asadbek
+const Register = lazy(() => import("./register"));//✅ Asadbek
+
 const ProductDetail = lazy(() => import("./product/ProductDetail"));//✅ Asadbek
+const ProductDescription = lazy(() => import("./product/product-description"));//✅ Asadbek
+const ProductCharacteristics = lazy(() => import("./product/product-characteristics"));//✅ Asadbek
+const ProductVideo = lazy(() => import("./product/product-video"));//✅ Asadbek
+const ProductImage = lazy(() => import("./product/product-image"));//✅ Asadbek
 
 const Kompany = lazy(() => import("./header-pages/collaction/Kompany"));//✅ Asadbek
 const Dostafka = lazy(() => import("./header-pages/collaction/Dostafka"));//✅ Asadbek
 const Vazvrad = lazy(() => import("./header-pages/collaction/vazvrad"));//✅ Asadbek
 const Garanty = lazy(() => import("./header-pages/collaction/garanty"));//✅ Asadbek
 const Kontakt = lazy(() => import("./header-pages/collaction/kontakt"));//✅ Asadbek
-const Blok = lazy(() => import("./header-pages/collaction/blok"));
+const Blok = lazy(() => import("./header-pages/collaction/blok"));//✅ Asadbek
 
 const Izbrinnoy = lazy(() => import("./header-pages/izbrinny/izbrinnoy"));
 const Korzinki = lazy(() => import("./header-pages/izbrinny/korzinki"));
@@ -63,7 +67,15 @@ const MainRouters = () => {
           children: [
             { index: true, element: <Home /> },
             { path: "/", element: <Home /> },
-            { path: "product/:id", element: <ProductDetail /> },
+
+            { path: "product/:id", element: <ProductDetail />, children:[
+              {index:true, element:<ProductDescription/>},
+              {path:"characteristics", element:<ProductCharacteristics/>},
+              {path:"video", element:<ProductVideo/>},
+              {path:"gallery", element:<ProductImage/>},
+            ] 
+          },
+
             {path:"category", element:<Category/>},
 
             { path: "kompany", element: <Kompany /> },
@@ -87,6 +99,8 @@ const MainRouters = () => {
             { path: "zvatilny", element: <Zvatilny /> },
           ],
         },
+        { path: "login", element: <Login /> },
+        { path: "register", element: <Register /> },
         { path: "*", element: <Not_Fount /> },
       ])}
     </Suspense>
