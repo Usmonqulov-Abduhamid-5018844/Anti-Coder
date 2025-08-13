@@ -8,6 +8,7 @@ import { ProductContent } from "../../static";
 import { NavLink, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleLike } from "../../lib/features/likeSlice";
+import { addToCart } from "../../lib/features/cartSlice";
 import type { RootState } from "../../lib/store";
 
 const ProductDetail = () => {
@@ -54,7 +55,6 @@ const ProductDetail = () => {
               <img src={detailImg} alt="" />
             </div>
           </div>
-
           <div className="w-1/2 pl-[59px] max-xl:w-[100%] max-xl:pl-0">
             <h1 className="font-bold text-5xl text-[#454545] max-lg:text-4xl max-md:text-3xl max-sm:text-2xl">
               Встраиваемый <br /> Светильник Novotech
@@ -70,14 +70,16 @@ const ProductDetail = () => {
                     6 399₽
                   </span>
                 </div>
-                <div className="w-[220px] h-[50px] ml-[32px] bg-[#454545] text-[#ffffff] rounded-[100px] flex items-center gap-3 pl-[58px] cursor-pointer max-sm:hidden">
+                <div
+                  className="w-[220px] h-[50px] ml-[32px] bg-[#454545] text-[#ffffff] rounded-[100px] flex items-center gap-3 pl-[58px] cursor-pointer max-sm:hidden"
+                  onClick={() => dispatch(addToCart(product))}
+                >
                   <FaShoppingCart />
                   <p>В корзину</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-5 ml-auto max-sm:hidden">
-
                 <div
                   onClick={() => dispatch(toggleLike(product))}
                   className={`w-[50px] h-[50px] rounded-full flex items-center justify-center cursor-pointer border ${

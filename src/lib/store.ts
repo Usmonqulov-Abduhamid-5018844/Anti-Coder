@@ -1,15 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
-import like from "./features/likeSlice";
+import { configureStore } from "@reduxjs/toolkit"
+import likeReducer from "./features/likeSlice"
+import cartReducer from "./features/cartSlice"
 
-const store = configureStore({
-    reducer:{
-        like
-    }
+export const store = configureStore({
+  reducer: {
+    like: likeReducer,
+    cart: cartReducer,
+  },
 })
-
-export default store
-
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
-export type AppStore = typeof store

@@ -36,8 +36,8 @@ const Garanty = lazy(() => import("./header-pages/collaction/garanty"));//✅ As
 const Kontakt = lazy(() => import("./header-pages/collaction/kontakt"));//✅ Asadbek
 const Blok = lazy(() => import("./header-pages/collaction/blok"));//✅ Asadbek
 
-const Izbrinnoy = lazy(() => import("./header-pages/izbrinny/izbrinnoy"));
-const Korzinki = lazy(() => import("./header-pages/izbrinny/korzinki"));
+const Izbrinnoy = lazy(() => import("./header-pages/izbrinny/izbrinnoy"));//✅ Asadbek
+const Korzinki = lazy(() => import("./header-pages/izbrinny/korzinki"));//✅ Asadbek
 const Sravneny = lazy(() => import("./header-pages/izbrinny/sravneny"));
 
 const Lampa = lazy(() => import("./header-pages/pages/lampa"));
